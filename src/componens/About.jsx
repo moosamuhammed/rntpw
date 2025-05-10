@@ -1,5 +1,7 @@
 import React from 'react';
 import aboutimg from '../uploads/slider1.jpg'
+import Aboutpage from '../pages/Aboutpage';
+import { Link } from 'react-router-dom';
 
 function About() {
   return (
@@ -20,7 +22,7 @@ function About() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam earum aliquid quasi quaerat minus a nesciunt optio veniam placeat tenetur odit obcaecati, laboriosam velit, magni, similique voluptates ratione expedita labore sunt rem blanditiis. Voluptatem, perspiciatis.
           </p>
           <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out">
-          <a href='/about'>Read More</a>
+          <Link  to='/about'>Read More</Link>
     </button>
         </div>
 

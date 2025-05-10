@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const posts = [
   {
@@ -63,10 +64,10 @@ function Blog() {
               </h3>
               <p className="text-sm text-black mb-4">{post.description}</p>
               <button className="bg-red-700 text-white px-4 py-2 rounded-md text-sm font-semibold shadow-md hover:bg-red-900">
-                <a href={post.link} className="text-white
+                <Link to='/blog' className="text-white
                  underline text-sm font-semibold hover:text-red-300">
                 Read More...
-              </a></button>
+              </Link></button>
             </div>
           </div>
         ))}

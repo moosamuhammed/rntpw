@@ -1,52 +1,64 @@
 import React from "react";
-import { Dumbbell } from "lucide-react";
 
-const workouts = [
+const features = [
   {
-    id: 1,
-    title: "Mind-Body Strength",
-    description: "A fusion of strength training and mindfulness techniques.",
-    duration: "45 mins"
+    title: "Western Integrative",
+    items: [
+      "Blends modern physical training (e.g., functional training, breathwork, fitness metrics) with psychological tools like emotional intelligence and intention-setting.",
+      "Focuses on self-awareness, transformation, and integration into daily life, mirroring Western coaching and mindfulness-based practices.",
+    ],
   },
   {
-    id: 2,
-    title: "Holistic HIIT",
-    description: "High-intensity interval training with breathwork and intention setting.",
-    duration: "30 mins"
+    title: "Mindful Strength",
+    items: [
+      "Combines bodyweight training with mindful breathing.",
+      "Prioritizes control over intensity.",
+      "Builds core strength and balance.",
+      "Emphasizes present-moment awareness.",
+      "Improves posture and joint stability.",
+    ],
   },
   {
-    id: 3,
-    title: "Conscious Core",
-    description: "Core-strengthening exercises with meditative focus.",
-    duration: "40 mins"
-  }
+    title: "Energy Alignment",
+    items: [
+      "Focuses on aligning physical effort with energetic flow.",
+      "Incorporates breath, intention, and visualization.",
+      "Enhances emotional resilience and nervous system balance.",
+    ],
+  },
 ];
 
-export default function WorkoutsPage() {
+const FeatureSection = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-red-100 via-white to-black px-6 py-12">
-      <div className="max-w-5xl mx-auto text-center">
-        <h1 className="text-5xl font-extrabold text-black mb-4">Explore Your Inner Power</h1>
-        <p className="text-lg text-black mb-10">Choose a workout that nourishes both your body and spirit.</p>
-      </div>
+    <section className="min-h-screen bg-gradient-to-b from-red-100 via-white to-black px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-6xl mx-auto text-center">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-black mb-4">
+          Explore Your Inner Power
+        </h1>
+        <p className="text-lg text-black mb-10">
+          Choose a workout that nourishes both your body and spirit.
+        </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {workouts.map((workout) => (
-          <div key={workout.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div className="p-6 flex flex-col items-start">
-              <div className="flex items-center mb-3">
-                <Dumbbell className="text-red-500 w-6 h-6 mr-2" />
-                <h2 className="text-xl font-semibold text-gray-800">{workout.title}</h2>
-              </div>
-              <p className="text-gray-600 mb-3">{workout.description}</p>
-              <span className="text-sm text-gray-500 mb-4">⏱ Duration: {workout.duration}</span>
-              <button className="mt-auto bg-red-600 hover:bg-red-700 text-white text-sm font-medium py-2 px-4 rounded-full">
-                Begin Session
-              </button>
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="bg-white/90 shadow-lg rounded-2xl p-6 transition-transform hover:scale-105 hover:shadow-xl"
+            >
+              <h2 className="text-xl font-semibold text-black mb-4">
+                {feature.title}
+              </h2>
+              <ul className="list-disc list-inside space-y-2 text-gray-800 text-left">
+                {feature.items.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default FeatureSection;
