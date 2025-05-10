@@ -2,11 +2,12 @@ import React from "react";
 
 const features = [
   {
-    title: "Lorem ipsum dolor sit.",
+    title: "Western Integrative",
     items: [
-      " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ducimus. Vitae!",
-      "  Lorem ipsum dolor sit amet.",
-      " Lorem ipsum dolor sit amet consectetur adipisicing.",
+      "It blends modern physical training methods (e.g., functional training, breathwork, fitness metrics) with psychological tools like emotional intelligence and intention-setting — common in Western personal development circles.",
+      " The focus on self-awareness, transformation, and integration into daily life mirrors Western coaching models, somatic therapy practices, and mindfulness-based fitness trends.",
+      "Elements like customization for all levels and personal growth tracking are rooted in Western wellness programming, emphasizing individual agency and progression.",
+
     ],
   },
   {

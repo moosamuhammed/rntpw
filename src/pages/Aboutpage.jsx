@@ -1,6 +1,7 @@
 import React from "react";
 import About from "../componens/About"; // Also check if "componens" is a typo and should be "components"
 
+
 export default function Aboutpage() {
   return (
     <>

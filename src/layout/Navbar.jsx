@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import logo from '../uploads/logo2.jpg'
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,26 +20,26 @@ function Navbar() {
   ];
 
   return (
-    <nav className="bg-white shadow">
+    <nav className="bg-white shadow py-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/">
+            <Link to="/">
             <img
-              className="h-14 w-50"
-              src="./src/uploads/logo2.jpg"
+              className="h-20 w-70"
+              src={logo}
               alt="Your Company"
             />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop menu */}
-          <div className="hidden sm:flex space-x-6">
+          <div className="hidden lg:flex   space-x-6">
             {links.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+               to={link.href}
                 className={`px-3 py-2 rounded-md text-sm font-medium ${
                   link.current
                     ? 'bg-red-600 text-white'
@@ -45,12 +47,12 @@ function Navbar() {
                 }`}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
           {/* Mobile menu button */}
-          <div className="sm:hidden">
+          <div className="block lg:hidden">
             <button
               onClick={toggleMenu}
               className="text-gray-700 hover:text-white hover:bg-gray-700 p-2 rounded-md"
@@ -76,16 +78,16 @@ function Navbar() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="sm:hidden flex justify-end bg-transparent px-4">
+        <div className="block lg:hidden flex justify-end bg-transparent px-4">
           <div className="px-2 pt-2 pb-3 space-y-1 text-right">
             {links.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 hover:text-black inline-block"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

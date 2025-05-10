@@ -15,6 +15,9 @@ import Events from './pages/Eventspage'
 import TestimonialPage from './pages/Testimonialpage'
 import BlogSection from './pages/Blogpage'
 import ContactPage from './pages/contactpage'
+import Info from './layout/Info'
+import ScrollToTop from './componens/Scrolltop'
+
 
 function App() {
 
@@ -22,9 +25,11 @@ function App() {
   return (
     <>
       <div>
+        <Info />
         <Navbar />
-    
+        <ScrollToTop />
       <Routes>
+      
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<Aboutpage />} />
         <Route path="/blog" element={<BlogSection />} />

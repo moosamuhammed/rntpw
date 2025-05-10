@@ -1,4 +1,5 @@
 import React from 'react';
+import aboutimg from '../uploads/slider1.jpg'
 
 function About() {
   return (
@@ -26,7 +27,7 @@ function About() {
         {/* Image Section */}
         <div className="w-full md:w-1/2 flex justify-center">
           <img
-            src="./src/uploads/slider1.jpg"
+            src={aboutimg}
             alt="Person using VR headset"
             className="h-[400px] md:h-[500px] w-auto rounded-3xl shadow-2xl object-cover transition-transform duration-300 hover:scale-105"
             onError={(e) => { e.target.style.display = 'none'; }}

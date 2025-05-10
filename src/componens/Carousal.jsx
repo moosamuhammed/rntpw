@@ -3,21 +3,24 @@ import Slider from 'react-slick';
 import { motion } from 'framer-motion';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import  website from '../uploads/website.jpg'
+import  slider2 from '../uploads/slider2.png'
+import slider3 from '../uploads/slider3.png'
 
 const images = [
   {
     id: 1,
-    url: "./src/uploads/website.jpg", // from public folder
+    url: website, // from public folder
     title: "Lorem ipsum dolor sit amet consectetur.",
   },
   {
     id: 2,
-    url: "./src/uploads/slider2.png",
+    url:slider2 ,
     title: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
   },
   {
     id: 3,
-    url: "./src/uploads/slider3.png",
+    url:slider3 ,
     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. In?",
   },
 ];
