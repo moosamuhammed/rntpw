@@ -1,8 +1,11 @@
 import React from "react";
 
+
+
 const features = [
   {
     title: "Western Integrative",
+    image: "public/images/card1.png", // Replace with actual path
     items: [
       "Blends modern physical training (e.g., functional training, breathwork, fitness metrics) with psychological tools like emotional intelligence and intention-setting.",
       "Focuses on self-awareness, transformation, and integration into daily life, mirroring Western coaching and mindfulness-based practices.",
@@ -10,6 +13,7 @@ const features = [
   },
   {
     title: "Mindful Strength",
+    image: "public/images/card2.png", // Replace with actual path
     items: [
       "Combines bodyweight training with mindful breathing.",
       "Prioritizes control over intensity.",
@@ -20,6 +24,7 @@ const features = [
   },
   {
     title: "Energy Alignment",
+    image: "public/images/card3.png", // Replace with actual path
     items: [
       "Focuses on aligning physical effort with energetic flow.",
       "Incorporates breath, intention, and visualization.",
@@ -45,6 +50,11 @@ const FeatureSection = () => {
               key={index}
               className="bg-white/90 shadow-lg rounded-2xl p-6 transition-transform hover:scale-105 hover:shadow-xl"
             >
+              <img
+                src={feature.image}
+                alt={feature.title}
+                className="w-full h-80 object-cover rounded-xl mb-4"
+              />
               <h2 className="text-xl font-semibold text-black mb-4">
                 {feature.title}
               </h2>

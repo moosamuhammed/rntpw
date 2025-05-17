@@ -1,4 +1,7 @@
 import React from 'react';
+import Pagination from '../componens/pagination';
+import { Link } from 'react-router-dom';
+
 
 const blogPosts = [
   {
@@ -23,6 +26,7 @@ const blogPosts = [
 
 const BlogSection = () => {
   return (
+  
     <section className="py-12 bg-gray-100">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">Latest Blog Posts</h2>
@@ -38,13 +42,15 @@ const BlogSection = () => {
                 <p className="text-gray-700">{post.excerpt}</p>
               </div>
               <div className="p-6 text-right">
-                <a href="#" className="text-blue-600 hover:text-blue-800">Read more</a>
+                <Link to="/fullblogs" className="text-blue-600 hover:text-blue-800">Read more</Link>
               </div>
             </div>
           ))}
+            
         </div>
       </div>
     </section>
+    
   );
 };
 

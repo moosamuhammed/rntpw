@@ -17,6 +17,10 @@ import BlogSection from './pages/Blogpage'
 import ContactPage from './pages/contactpage'
 import Info from './layout/Info'
 import ScrollToTop from './componens/Scrolltop'
+import Pagination from './componens/pagination'
+import FullBlogSection from './pages/Blogviews'
+import SidebarApp from './pages/Blogviews'
+import Side from './pages/Blogviews'
 
 
 function App() {
@@ -26,7 +30,10 @@ function App() {
     <>
       <div>
         <Info />
+      
         <Navbar />
+
+      
         <ScrollToTop />
       <Routes>
       
@@ -37,9 +44,12 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/testimonial" element={<TestimonialPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/fullblogs" element={<Side />} />
+        
 
       </Routes>
  
+
 <Footer />
 
       </div>

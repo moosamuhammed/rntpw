@@ -64,7 +64,7 @@ function Blog() {
               </h3>
               <p className="text-sm text-black mb-4">{post.description}</p>
               <button className="bg-red-700 text-white px-4 py-2 rounded-md text-sm font-semibold shadow-md hover:bg-red-900">
-                <Link to='/blog' className="text-white
+                <Link to='/fullblogs' className="text-white
                  underline text-sm font-semibold hover:text-red-300">
                 Read More...
               </Link></button>
